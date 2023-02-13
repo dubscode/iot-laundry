@@ -1,5 +1,4 @@
 import { SSTConfig } from 'sst';
-import { API } from './stacks/MyStack';
 import { IotStack } from './stacks/iot-stack';
 
 export default {
@@ -13,6 +12,6 @@ export default {
     app.setDefaultFunctionProps({
       runtime: 'nodejs18.x',
     });
-    app.stack(API).stack(IotStack);
+    app.stack(IotStack);
   },
 } satisfies SSTConfig;
