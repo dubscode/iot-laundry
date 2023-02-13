@@ -16,7 +16,7 @@ export function IotStack({ stack }: StackContext) {
   const funcSmsSender = new Function(stack, 'iot-sms-function', {
     handler: 'packages/functions/src/iot.smsHandler',
     environment: {
-      PHONE_NUMBER: process.env.PHONE_NUMBER,
+      PHONE_NUMBER: process.env.PHONE_NUMBER as string,
     },
     permissions: ['sns:Publish'],
   });
